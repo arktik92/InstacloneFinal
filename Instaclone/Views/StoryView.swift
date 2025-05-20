@@ -1,3 +1,11 @@
+//
+//  StoryView.swift
+//  Instaclone
+//
+//  Created by Esteban SEMELLIER on 20/05/2025.
+//
+
+
 import SwiftUI
 
 struct StoryView: View {

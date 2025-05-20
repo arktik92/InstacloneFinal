@@ -326,21 +326,3 @@ struct StoryView: View {
         return Text("Erreur de prévisualisation")
     }
 }
-
-#Preview {
-    if let url = URL(string: "https://i.pravatar.cc/300?u=1") {
-        let user = User(id: 1, name: "Neo", profilePictureURL: url)
-        let imageURLs = [URL(string: "https://picsum.photos/400/800?random=1")!]
-        let story = Story(userId: 1, imageURLs: imageURLs)
-        let state = UserStoryState(userId: 1, seen: false, liked: false, lastViewedIndex: 0)
-        
-        return StoryView(
-            viewModel: StoryViewModel(user: user, story: story, state: state),
-            storyItems: [(user: user, story: story, state: state)],
-            currentIndex: 0,
-            isPresented: .constant(true)
-        )
-    } else {
-        return Text("Erreur de prévisualisation")
-    }
-}
